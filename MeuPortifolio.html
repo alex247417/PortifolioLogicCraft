@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alecsandro - Desenvolvedor Full-Stack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="header-bg backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-shadow duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-xl font-bold">Alecsandro</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#sobre" class="hover:text-accent transition">Sobre</a>
+                <a href="#habilidades" class="hover:text-accent transition">Habilidades</a>
+                <a href="#projetos" class="hover:text-accent transition">Projetos</a>
+                <a href="#contato" class="hover:text-accent transition">Contato</a>
+                <button id="theme-toggle" aria-label="Alternar tema">
+                    <i id="theme-icon-sun" class="fas fa-sun"></i>
+                    <i id="theme-icon-moon" class="fas fa-moon hidden"></i>
+                </button>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-2xl focus:outline-none">
+                 <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t" style="border-color: var(--border-color);">
+            <a href="#sobre" class="block py-2 hover:text-accent">Sobre</a>
+            <a href="#habilidades" class="block py-2 hover:text-accent">Habilidades</a>
+            <a href="#projetos" class="block py-2 hover:text-accent">Projetos</a>
+            <a href="#contato" class="block py-2 hover:text-accent">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="min-h-screen flex items-center card">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl section-title">Desenvolvedor Full-Stack</h1>
+                <p class="mt-4 text-lg md:text-xl section-subtitle max-w-3xl mx-auto">Construindo soluções robustas e escaláveis que impulsionam negócios.</p>
+                <div class="mt-8">
+                    <a href="#contato" class="btn-primary font-bold py-3 px-8 rounded-lg shadow-lg">Vamos conversar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mim -->
+        <section id="sobre" class="py-20 card">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl section-title">Sobre Mim</h2>
+                </div>
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-lg leading-relaxed mb-6">
+                        Sou um desenvolvedor full-stack com 5 anos de experiência, especializado na criação e manutenção de ecossistemas back-end com C# e .NET. Minha paixão é transformar desafios de negócio em software de alta performance, aplicando práticas de Clean Code, SOLID e TDD para garantir soluções manuteníveis e escaláveis.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Com forte vivência em metodologias ágeis como Scrum, colaboro de forma eficaz com equipes para entregar valor contínuo, desde a concepção da arquitetura até a implantação em ambientes de nuvem como Azure.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades/Tecnologias -->
+        <section id="habilidades" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl section-title">Habilidades & Tecnologias</h2>
+                    <p class="section-subtitle mt-4 max-w-2xl mx-auto">Meu arsenal de ferramentas para construir, testar e implantar soluções de ponta.</p>
+                </div>
+                <div id="skills-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
+                    <!-- Skills will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos Section -->
+        <section id="projetos" class="py-20 card">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl section-title">Projetos em Destaque</h2>
+                    <p class="section-subtitle mt-4 max-w-2xl mx-auto">Uma seleção de projetos que demonstram minha capacidade de resolver problemas complexos com foco no back-end.</p>
+                </div>
+                <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <!-- Project cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- O que posso fazer por você? Section -->
+        <section id="solucoes" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl section-title">O que posso fazer por você?</h2>
+                    <p class="section-subtitle mt-4 max-w-2xl mx-auto">Desde a arquitetura de sistemas robustos até a criação de experiências de usuário fluidas, aqui estão alguns exemplos do valor que posso agregar ao seu projeto.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="reveal-on-scroll card solution-card rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-48 bg-gray-100 relative image-container">
+                            <img src="/Images/DashBoards.png" alt="Dashboard de sistema com gráficos" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 card-title">APIs e Sistemas Back-end</h3>
+                            <p class="card-text">Desenvolvo o coração da sua aplicação. APIs RESTful seguras, escaláveis e de alta performance com C# e .NET, projetadas para serem a base sólida do seu negócio digital.</p>
+                        </div>
+                    </div>
+                    <div class="reveal-on-scroll card solution-card rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-48 bg-gray-100 relative image-container">
+                            <img src="/Images/WebMorden.jpg" alt="Interface de um site de e-commerce moderno" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 card-title">Aplicações Web Modernas</h3>
+                            <p class="card-text">Crio interfaces de usuário interativas e responsivas com React e JavaScript, conectadas a um back-end poderoso. Soluções completas, do clique do usuário à persistência no banco de dados.</p>
+                        </div>
+                    </div>
+                    <div class="reveal-on-scroll card solution-card rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-48 bg-gray-100 relative image-container">
+                            <img src="/Images/Cloud.png" alt="Dashboard de sistema com gráficos e pipeline de CI/CD" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 card-title">Soluções em Nuvem e DevOps</h3>
+                            <p class="card-text">Automatizo a implantação e escalo suas aplicações com Docker e Azure. Crio pipelines de CI/CD e arquiteturas serverless para garantir que sua solução seja resiliente, eficiente e pronta para o futuro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="py-20 card">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl section-title">Contato</h2>
+                    <p class="section-subtitle mt-6 text-lg leading-relaxed">Estou disponível para novas oportunidades e desafios. Entre em contato para discutirmos como posso agregar valor ao seu projeto.</p>
+                    <div class="mt-8 flex justify-center items-center flex-wrap gap-10">
+                        <a href="https://www.linkedin.com/in/alecsandrosilva2474/" target="_blank" class="contact-icon-link text-4xl" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/alex247417" target="_blank" class="contact-icon-link text-4xl" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <button id="email-toggle" class="contact-icon-link text-4xl" aria-label="E-mail"><i class="fas fa-envelope"></i></button>
+                        <a href="https://wa.me/5511940493007" target="_blank" class="contact-icon-link text-4xl" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div id="email-form-container">
+                        <form id="contact-form" class="max-w-xl mx-auto text-left space-y-4">
+                            <input id="contact-name" type="text" placeholder="Seu nome" required class="form-input w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-accent">
+                            <input id="contact-email" type="email" placeholder="Seu e-mail" required class="form-input w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-accent">
+                            <textarea id="contact-message" placeholder="Sua mensagem" rows="5" required class="form-input w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                            <button type="submit" class="btn-primary w-full font-bold py-3 rounded-lg shadow-lg">Enviar Mensagem</button>
+                        </form>
+                        <p id="form-status" class="mt-4 text-center"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal fixed inset-0 bg-black bg-opacity-70 z-50 hidden items-center justify-center p-4 opacity-0">
+        <div class="modal-content card rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95">
+            <div id="modal-body" class="p-8">
+                <!-- Modal content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="card border-t">
+        <div class="container mx-auto py-6 px-6 text-center">
+            <p>&copy; 2025 Alecsandro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="/Scripts/script.js"></script>
+</body>
+</html>
