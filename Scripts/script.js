@@ -246,5 +246,60 @@ CREATE TABLE Products (
             // Load saved theme
             const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             applyTheme(savedTheme);
-        });
+  // --- LÓGICA PARA ÍCONES FLUTUANTES ---
+
+// 1. Configuração dos ícones para cada seção
+const sectionIconConfig = {
+    'inicio': ['fas fa-code', 'fab fa-react', 'fab fa-docker', 'fas fa-database', 'fas fa-cogs', 'fas fa-terminal', 'fab fa-js-square', 'fas fa-cloud'],
+    'sobre': ['fas fa-book-open', 'fas fa-feather-alt', 'fas fa-lightbulb', 'fas fa-user-tie'],
+    'contato': ['fab fa-linkedin-in', 'fab fa-github', 'fas fa-envelope', 'fab fa-whatsapp']
+};
+
+// 2. Função para criar e adicionar os ícones a uma seção
+const addFloatingIcons = (section) => {
+    const iconContainer = section.querySelector('.floating-icons-container');
+    const sectionId = section.id;
     
+    // Verifica se o container existe e se já não tem ícones
+    if (iconContainer && iconContainer.childElementCount === 0) {
+        const icons = sectionIconConfig[sectionId];
+        if (icons) {
+            icons.forEach((iconClass, i) => {
+                const icon = document.createElement('i');
+                icon.className = `floating-icon ${iconClass}`;
+                
+                // Posicionamento aleatório nas laterais
+                const side = Math.random() < 0.5 ? 'left' : 'right';
+                icon.style.top = `${Math.random() * 90}%`;
+                if (side === 'left') {
+                    icon.style.left = `${Math.random() * 20}%`;
+                } else {
+                    icon.style.right = `${Math.random() * 20}%`;
+                }
+
+                // Animações com delays e durações aleatórias
+                icon.style.animationDelay = `${i * 0.5}s`;
+                icon.style.animationDuration = `${Math.random() * 5 + 7}s`; // Duração entre 7 e 12 segundos
+                
+                iconContainer.appendChild(icon);
+            });
+        }
+    }
+};
+
+// 3. Observador para ativar a animação quando a seção estiver visível
+const iconSectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            addFloatingIcons(entry.target);
+        }
+    });
+}, { threshold: 0.1 }); // Ativa quando 10% da seção está visível
+
+// 4. Aplica o observador a todas as seções que devem ter ícones
+document.querySelectorAll('#inicio, #sobre, #contato').forEach(section => {
+    iconSectionObserver.observe(section);
+});
+
+
+});
