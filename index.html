@@ -11,19 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="icon" href="/Images/LogoTipo.ico" type="image/x-icon">
 
 </head>
 <body class="antialiased">
-
+  <div id="emojiContainer" class="emoji-container"></div>
     <!-- Header -->
     <header id="header" class="header-bg backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-shadow duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#inicio" class="text-xl font-bold">Alecsandro</a>
+            <a href="#inicio" class="text-xl font-bold hover:text-accent transition duration-300 hover:scale-110 hover:-translate-y-1">
+  <img src="/Images/Logotipo_Coruja_LogicCraft-removebg-preview.png" alt="Logo LogicCraft" class="h-10 inline-block mr-2" />
+  Logic<span class="text-blue-500">Craft</span>
+</a>
+
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#sobre" class="hover:text-accent transition">Sobre</a>
-                <a href="#habilidades" class="hover:text-accent transition">Habilidades</a>
-                <a href="#projetos" class="hover:text-accent transition">Projetos</a>
-                <a href="#contato" class="hover:text-accent transition">Contato</a>
+                <a href="#sobre" class="hover:text-accent transition duration-300 hover:scale-110 hover:-translate-y-1">Sobre</a>
+                <a href="#habilidades" class="hover:text-accent transition duration-300 hover:scale-110 hover:-translate-y-1">Habilidades</a>
+                <a href="#projetos" class="hover:text-accent transition duration-300 hover:scale-110 hover:-translate-y-1">Projetos</a>
+                <a href="#contato" class="hover:text-accent transition duration-300 hover:scale-110 hover:-translate-y-1">Contato</a>
                 <button id="theme-toggle" aria-label="Alternar tema">
                     <i id="theme-icon-sun" class="fas fa-sun"></i>
                     <i id="theme-icon-moon" class="fas fa-moon hidden"></i>
@@ -43,8 +48,9 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="inicio" class="min-h-screen flex items-center card">
+        <section id="inicio" class="min-h-screen flex items-center">
             <div class="container mx-auto px-6 text-center">
+            <div class="floating-icons-container"></div>
                 <h1 class="text-4xl md:text-6xl section-title">Desenvolvedor Full-Stack</h1>
                 <p class="mt-4 text-lg md:text-xl section-subtitle max-w-3xl mx-auto">Construindo soluções robustas e escaláveis que impulsionam negócios.</p>
                 <div class="mt-8">
@@ -54,8 +60,9 @@
         </section>
 
         <!-- Sobre Mim -->
-        <section id="sobre" class="py-20 card">
-            <div class="container mx-auto px-6">
+        <section id="sobre" class="py-20 card relative overflow-hidden ">
+             <div class="floating-icons-container"></div>
+             <div class="container mx-auto px-6 relative z-10">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl section-title">Sobre Mim</h2>
                 </div>
@@ -72,7 +79,7 @@
 
         <!-- Habilidades/Tecnologias -->
         <section id="habilidades" class="py-20">
-            <div class="container mx-auto px-6">
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl section-title">Habilidades & Tecnologias</h2>
                     <p class="section-subtitle mt-4 max-w-2xl mx-auto">Meu arsenal de ferramentas para construir, testar e implantar soluções de ponta.</p>
@@ -97,16 +104,16 @@
         </section>
 
         <!-- O que posso fazer por você? Section -->
-        <section id="solucoes" class="py-20">
+        <section id="solucoes" class="py-20 hover:text-accent">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl section-title">O que posso fazer por você?</h2>
                     <p class="section-subtitle mt-4 max-w-2xl mx-auto">Desde a arquitetura de sistemas robustos até a criação de experiências de usuário fluidas, aqui estão alguns exemplos do valor que posso agregar ao seu projeto.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 ">
                     <div class="reveal-on-scroll card solution-card rounded-lg shadow-lg overflow-hidden group">
                         <div class="h-48 bg-gray-100 relative image-container">
-                            <img src="/Images/DashBoards.png" alt="Dashboard de sistema com gráficos" class="w-full h-full object-cover">
+                            <img src="/Images/DashBoards.png" alt="Dashboard de sistema com gráficos" class="w-full h-full object-cover ">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2 card-title">APIs e Sistemas Back-end</h3>
@@ -136,8 +143,9 @@
         </section>
 
         <!-- Contato Section -->
-        <section id="contato" class="py-20 card">
-            <div class="container mx-auto px-6">
+        <section id="contato" class="py-20 card relative overflow-hidden">
+            <div class="floating-icons-container"></div>
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="text-center max-w-3xl mx-auto">
                     <h2 class="text-3xl md:text-4xl section-title">Contato</h2>
                     <p class="section-subtitle mt-6 text-lg leading-relaxed">Estou disponível para novas oportunidades e desafios. Entre em contato para discutirmos como posso agregar valor ao seu projeto.</p>
