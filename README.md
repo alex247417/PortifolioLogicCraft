@@ -18,7 +18,7 @@ Este repositório contém meu portfólio pessoal como desenvolvedor **Full-Stack
 
 ```
 📁 raiz do projeto/
-├── MeuPortifolio.html         # HTML principal com estrutura semântica
+├── index.html         # HTML principal com estrutura semântica
 ├── /Images/                   # Imagens do site (logotipo, ilustrações de projetos/soluções)
 ├── /Style/style.css           # Estilos customizados além do Tailwind
 ├── /Scripts/script.js         # Script para interações e carregamento dinâmico
