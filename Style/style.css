@@ -2,7 +2,7 @@
 /* Define a fonte padrão e as cores principais */
         /* Define as variáveis de cor para os temas claro e escuro */
         :root {
-            --bg-color: #f8f9fa;
+            --bg-color: #f9f9f904;
             --bg-secondary-color: #ffffff;
             --text-color: #212529;
             --text-muted-color: #6c757d;
@@ -158,3 +158,55 @@
 .solution-card:hover .image-container::after {
     opacity: 1;
 }
+ /* Estilos para o efeito fade-in ao rolar */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Estilos para os Ícones Flutuantes */
+.floating-icons-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Garante que os ícones não interfiram com cliques */
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 1.5rem; /* Tamanho do ícone */
+    color: var(--accent-color);
+    opacity: 0;
+    animation: float 8s ease-in-out infinite, fadeIn 1s ease forwards;
+}
+
+/* Animação de flutuação */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Animação de surgimento */
+@keyframes fadeIn {
+    to { opacity: 0.15; } /* Opacidade final no tema claro */
+}
+
+/* Ajuste de opacidade para o tema escuro */
+html.dark .floating-icon {
+    opacity: 0;
+    animation: float 8s ease-in-out infinite, fadeInDark 1s ease forwards;
+}
+
+@keyframes fadeInDark {
+    to { opacity: 0.1; } /* Opacidade final no tema escuro */
+}
+
+
